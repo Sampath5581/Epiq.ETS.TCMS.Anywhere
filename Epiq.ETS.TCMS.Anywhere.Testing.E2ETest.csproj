@@ -1,0 +1,551 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A5CF1E40-6824-443B-8236-EE8362B523F8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Epiq.ETS.TCMS.Anywhere.Testing.E2ETest</RootNamespace>
+    <AssemblyName>Epiq.ETS.TCMS.Anywhere.Testing.E2ETest</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'DebugDev%28Firefox%29|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugDev%28Chrome%29|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DebugDev%28Chrome%29\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugDev%28InternetExplorer%29|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DebugDev%28InternetExplorer%29\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugQA%28Firefox%29|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DebugQA%28Firefox%29\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugQA%28Chrome%29|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DebugQA%28Chrome%29\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugQA%28InternetExplorer%29|AnyCPU'">
+    <OutputPath>bin\DebugQA%28InternetExplorer%29\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'LocalQA%28Chrome%29|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\LocalQA%28Chrome%29\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'LocalQA%28Firefox%29|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\LocalQA%28Firefox%29\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'LocalQA%28InternetExplorer%29|AnyCPU'">
+    <OutputPath>bin\LocalQA%28InternetExplorer%29\</OutputPath>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugQA%28RC%29|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DebugQA%28RC%29\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'QA-Aeris|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\QA-Aeris\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'NewConfig|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\NewConfig\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Label="SlowCheetah">
+    <SlowCheetahToolsPath>$([System.IO.Path]::GetFullPath( $(MSBuildProjectDirectory)\.\packages\SlowCheetah.2.5.15\tools\))</SlowCheetahToolsPath>
+    <SlowCheetah_EnableImportFromNuGet Condition=" '$(SlowCheetah_EnableImportFromNuGet)'=='' ">true</SlowCheetah_EnableImportFromNuGet>
+    <SlowCheetah_NuGetImportPath Condition=" '$(SlowCheetah_NuGetImportPath)'=='' ">$([System.IO.Path]::GetFullPath( $(MSBuildProjectDirectory)\Properties\SlowCheetah\SlowCheetah.Transforms.targets ))</SlowCheetah_NuGetImportPath>
+    <SlowCheetahTargets Condition=" '$(SlowCheetah_EnableImportFromNuGet)'=='true' and Exists('$(SlowCheetah_NuGetImportPath)') ">$(SlowCheetah_NuGetImportPath)</SlowCheetahTargets>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoItX3.Assembly, Version=3.0.0.0, Culture=neutral, PublicKeyToken=a646454c8d475470, processorArchitecture=MSIL">
+      <HintPath>packages\AutoItX.Dotnet.3.3.14.5\lib\AutoItX3.Assembly.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Bogus, Version=22.0.2.0, Culture=neutral, PublicKeyToken=fa1bb3f3f218129a, processorArchitecture=MSIL">
+      <HintPath>packages\Bogus.22.0.2\lib\net40\Bogus.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ConvertCase, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\ConvertCase.2.0.0\lib\ConvertCase.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FluentAssertions, Version=4.4.0.0, Culture=neutral, PublicKeyToken=33f2691a05b67b6a, processorArchitecture=MSIL">
+      <HintPath>packages\FluentAssertions.4.4.0\lib\net45\FluentAssertions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FluentAssertions.Core, Version=4.4.0.0, Culture=neutral, PublicKeyToken=33f2691a05b67b6a, processorArchitecture=MSIL">
+      <HintPath>packages\FluentAssertions.4.4.0\lib\net45\FluentAssertions.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="nunit.core, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <HintPath>packages\NUnitTestAdapter.2.0.0\lib\nunit.core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="nunit.core.interfaces, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <HintPath>packages\NUnitTestAdapter.2.0.0\lib\nunit.core.interfaces.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <HintPath>packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="nunit.util, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <HintPath>packages\NUnitTestAdapter.2.0.0\lib\nunit.util.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="NUnit.VisualStudio.TestAdapter, Version=2.0.0.0, Culture=neutral, PublicKeyToken=4cb40d35494691ac, processorArchitecture=MSIL">
+      <HintPath>packages\NUnitTestAdapter.2.0.0\lib\NUnit.VisualStudio.TestAdapter.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TechTalk.SpecFlow, Version=2.1.0.0, Culture=neutral, PublicKeyToken=0778194805d6db41, processorArchitecture=MSIL">
+      <HintPath>packages\SpecFlow.2.1.0\lib\net45\TechTalk.SpecFlow.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebDriver, Version=3.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Selenium.WebDriver.3.6.0\lib\net45\WebDriver.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebDriver.Support, Version=3.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Selenium.Support.3.6.0\lib\net45\WebDriver.Support.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Features\341Meeting\341Meeting_Case_Information.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>341Meeting_Case_Information.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\341Meeting\341Meeting_Past.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>341Meeting_Past.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\341Meeting\341Meeting_Upcoming.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>341Meeting_Upcoming.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Test Framework\Pages\341Meeting\341Meeting_Case_Information.cs" />
+    <Compile Include="Test Framework\Pages\341Meeting\341Meeting_Past.cs" />
+    <Compile Include="Test Framework\Pages\341Meeting\341Meeting_Upcoming.cs" />
+    <Compile Include="Test Framework\Pages\Assets\AddAsset.cs" />
+    <Compile Include="Test Framework\Pages\Assets\EditAsset.cs" />
+    <Compile Include="Test Framework\Pages\Assets\ViewAsset.cs" />
+    <Compile Include="Test Framework\Pages\BankingCenter\AccountGearDetailsPage.cs" />
+    <Compile Include="Test Framework\Pages\BankingCenter\AddDeposit.cs" />
+    <Compile Include="Test Framework\Pages\BankingCenter\BankingPage.cs" />
+    <Compile Include="Test Framework\Pages\BankingCenter\BondPremiumDisbursement.cs" />
+    <Compile Include="Test Framework\Pages\BankingCenter\CheckCreationPage.cs" />
+    <Compile Include="Test Framework\Pages\BankingCenter\IssueReconciliation.cs" />
+    <Compile Include="Test Framework\Pages\BankingCenter\ReceiptLogSteps.cs" />
+    <Compile Include="Test Framework\Pages\CaseLevelNavigation\CaseLevelNavigationPage.cs" />
+    <Compile Include="Test Framework\Pages\Cases\Cases_List\NewCaseListPage.cs" />
+    <Compile Include="Test Framework\Pages\Cases\Detail\NewCaseListSearchPage.cs" />
+    <Compile Include="Test Framework\Pages\Cases\Case_General\Case_General_Page.cs" />
+    <Compile Include="Test Framework\Pages\Cases\Class1.cs" />
+    <Compile Include="Test Framework\Pages\341 Meeting\DSOClaimantModal.cs" />
+    <Compile Include="Test Framework\Pages\341 Meeting\Meetings341Destination.cs" />
+    <Compile Include="Test Framework\Pages\Cases\Detail\CaseDetailPage.cs" />
+    <Compile Include="Test Framework\Pages\Cases\Detail\Claims\ADDDSOClaimsPage.cs" />
+    <Compile Include="Test Framework\Pages\Common\ContactEpiqPage.cs" />
+    <Compile Include="Test Framework\Pages\Common\FormFields\MyTextAreaField.cs" />
+    <Compile Include="Test Framework\Pages\Common\FormFields\MyPhoneField.cs" />
+    <Compile Include="Test Framework\Pages\Common\FormFields\MySelectDropdownField.cs" />
+    <Compile Include="Test Framework\Pages\Common\FormFields\MyTextboxField.cs" />
+    <Compile Include="Test Framework\Pages\DashboardExtendNoData\GlobalExtendNoDataPage.cs" />
+    <Compile Include="Test Framework\Pages\DashboardExtendNoData\TrusteeVisibilityPage.cs" />
+    <Compile Include="Test Framework\Pages\Dashboard\Dashboard_EnhancementsPage.cs" />
+    <Compile Include="Test Framework\Pages\Dates\DatesPage.cs" />
+    <Compile Include="Test Framework\Pages\Documents\DocumentsPage.cs" />
+    <Compile Include="Test Framework\Pages\Emails\EmailsPage.cs" />
+    <Compile Include="Test Framework\Pages\Imports\ImportAssets.cs" />
+    <Compile Include="Test Framework\Pages\Imports\ImportCaseDataChangesPage.cs" />
+    <Compile Include="Test Framework\Pages\Imports\ImportClaimsPage.cs" />
+    <Compile Include="Test Framework\Pages\Imports\ImportDatesPage.cs" />
+    <Compile Include="Test Framework\Pages\Imports\ImportDocumetsPage.cs" />
+    <Compile Include="Test Framework\Pages\Loginpages.cs" />
+    <Compile Include="Test Framework\Pages\Pariticipants\ParticipantRolesPage.cs" />
+    <Compile Include="Test Framework\Pages\Pariticipants\ParticipantsPage.cs" />
+    <Compile Include="Test Framework\Pages\Superadmin\ConfirmationDialog.cs" />
+    <Compile Include="Test Framework\Pages\Superadmin\SuperAdminPage.cs" />
+    <Compile Include="Test Framework\Pages\Reports\ReportsPage.cs" />
+    <Compile Include="Test Framework\Pages\Superadmin\SuperAdminPages.cs" />
+    <Compile Include="Test Framework\Pages\Tasks\TaskResolvedPage.cs" />
+    <Compile Include="Test Framework\Pages\Tasks\TasksPage.cs" />
+    <Compile Include="Test Framework\Pages\UnityReports\UnityReportsPages.cs" />
+    <Compile Include="Test Framework\Pages\User\AddRole.cs" />
+    <Compile Include="Test Framework\Pages\User\AddUser.cs" />
+    <Compile Include="Test Framework\Pages\User\UserManagement.cs" />
+    <Compile Include="Test Framework\Steps\341 Meetings\341Meeting-341DestinationSteps.cs" />
+    <Compile Include="Test Framework\Steps\341Meeting\341Meeting_Case_InformationSteps.cs" />
+    <Compile Include="Test Framework\Steps\341Meeting\341Meeting_PastSteps.cs" />
+    <Compile Include="Test Framework\Steps\341Meeting\341Meeting_UpcomingSteps.cs" />
+    <Compile Include="Test Framework\Steps\Assets\AssetManagementSteps.cs" />
+    <Compile Include="Test Framework\Steps\Bankings\AccountGearDetailSteps.cs" />
+    <Compile Include="Test Framework\Steps\Bankings\BankingManagementPageSteps.cs" />
+    <Compile Include="Test Framework\Steps\Bankings\BondPremiumDisbursementSteps.cs" />
+    <Compile Include="Test Framework\Steps\Bankings\CheckCreationStep.cs" />
+    <Compile Include="Test Framework\Steps\CaseLevelNavigation\CaseLevelNavigationSteps.cs" />
+    <Compile Include="Test Framework\Steps\Cases\Cases_List\NewCaseListSearchSteps.cs" />
+    <Compile Include="Test Framework\Steps\Cases\Cases_List\NewCaseListSteps.cs" />
+    <Compile Include="Test Framework\Steps\Cases\Case_General\CaseGeneralSteps.cs" />
+    <Compile Include="Test Framework\Steps\Cases\Detail\Banking\CaseDetail_Banking_EditDepositSteps.cs" />
+    <Compile Include="Test Framework\Steps\Cases\Detail\Banking\CaseDetail_Banking_NewTransactionSteps.cs" />
+    <Compile Include="Test Framework\Steps\Cases\Detail\Banking\CaseDetail_Banking_NewDepositSteps.cs" />
+    <Compile Include="Test Framework\Steps\Cases\Detail\Banking\CaseDetail_Banking_PayToTheOrderOfPredictive.cs" />
+    <Compile Include="Test Framework\Steps\Cases\Detail\Banking\CaseDetail_Banking_TransactionsPrintSteps.cs" />
+    <Compile Include="Test Framework\Steps\Cases\Detail\CaseDetailPage_CommonSteps.cs" />
+    <Compile Include="Test Framework\Steps\Cases\Detail\Notes\OneclicknotesSteps.cs" />
+    <Compile Include="Test Framework\Steps\Claims\ADDDSOClaimStep.cs" />
+    <Compile Include="Test Framework\Steps\Claims\ClaimsMangementSteps.cs" />
+    <Compile Include="Test Framework\Steps\Common\Base\CommonMethodsUnityStepBase.cs" />
+    <Compile Include="Test Framework\Pages\Cases\Detail\Banking\AssetLinkData.cs" />
+    <Compile Include="Test Framework\Pages\Cases\Detail\Banking\NonClaimPayeeLinkData.cs" />
+    <Compile Include="Test Framework\Steps\Cases\Detail\Assets\CaseAssetsEditAssetSteps.cs" />
+    <Compile Include="Test Framework\Steps\Cases\Detail\Assets\CaseAssetsNewAssetSteps.cs" />
+    <Compile Include="Test Framework\Steps\Cases\Detail\Banking\CaseDetail_Banking_DepositsAddAssetLinkSteps.cs" />
+    <Compile Include="Test Framework\Steps\Cases\Detail\Banking\CaseDetail_Banking_TransactionsLinksSteps.cs" />
+    <Compile Include="Test Framework\Pages\Cases\Detail\Banking\ClaimLinksComponent.cs" />
+    <Compile Include="Test Framework\Steps\Cases\Detail\Banking\CaseDetail_Banking_CheckAddSplitUTCSteps.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Test Framework\Pages\Cases\Detail\Assets\AssetForm.cs" />
+    <Compile Include="Test Framework\Steps\Cases\Detail\Assets\CaseAssetsFormSteps.cs" />
+    <Compile Include="Test Framework\Steps\Cases\Detail\Banking\CaseDetail_Banking_AddTransactionsSpecialSteps.cs" />
+    <Compile Include="Test Framework\Pages\Cases\Detail\Banking\ClaimLinkData.cs" />
+    <Compile Include="Test Framework\Steps\Common\CommonDBSteps.cs" />
+    <Compile Include="Test Framework\Core\StepBase.cs" />
+    <Compile Include="Test Framework\Pages\Cases\Detail\Assets\AssetsDetailTab.cs" />
+    <Compile Include="Test Framework\Pages\Cases\Detail\Assets\AssetSummaryItemData.cs" />
+    <Compile Include="Test Framework\Pages\Cases\Detail\Banking\BankingDetailTab.cs" />
+    <Compile Include="Test Framework\Pages\Cases\Detail\Banking\BankSummaryItemData.cs" />
+    <Compile Include="Test Framework\Pages\Cases\Detail\Claims\ClaimForm.cs" />
+    <Compile Include="Test Framework\Pages\Cases\Detail\Distribution\DistributionClaimCategoryData.cs" />
+    <Compile Include="Test Framework\Pages\Cases\Detail\Distribution\DistributionGroupData.cs" />
+    <Compile Include="Test Framework\Pages\Cases\Detail\Distribution\DistributionForm.cs" />
+    <Compile Include="Test Framework\Pages\Cases\Detail\Distribution\DistributionSummaryItemData.cs" />
+    <Compile Include="Test Framework\Pages\Cases\Detail\Distribution\DistributionTab.cs" />
+    <Compile Include="Test Framework\Pages\Cases\Detail\Notes\CaseNoteData.cs" />
+    <Compile Include="Test Framework\Pages\Cases\Detail\Claims\ClaimsDetailTab.cs" />
+    <Compile Include="Test Framework\Pages\Cases\Detail\Notes\NotesWindow.cs" />
+    <Compile Include="Test Framework\Pages\Cases\Detail\Assets\AssetData.cs" />
+    <Compile Include="Test Framework\Steps\Cases\Detail\Assets\CaseAssetsListSteps.cs" />
+    <Compile Include="Test Framework\Steps\Cases\Detail\Assets\CaseAssetsSummarySteps.cs" />
+    <Compile Include="Test Framework\Steps\Cases\Detail\Banking\CaseDetail_Banking_BASummarySteps.cs" />
+    <Compile Include="Test Framework\Pages\Cases\Detail\Banking\BankTransactionData.cs" />
+    <Compile Include="Test Framework\Steps\Cases\Detail\Banking\CaseDetail_Banking_TransactionsListSteps.cs" />
+    <Compile Include="Test Framework\Pages\Cases\Detail\Banking\TransactionForm.cs" />
+    <Compile Include="Test Framework\Pages\Cases\Detail\Distribution\DistributionClaimClassData.cs" />
+    <Compile Include="Test Framework\Pages\Cases\Detail\Distribution\DistributionClaimData.cs" />
+    <Compile Include="Test Framework\Steps\Cases\Detail\Claims\CaseClaimsNewSteps.cs" />
+    <Compile Include="Test Framework\Steps\Cases\Detail\Distribution\DistributionsSummarySteps.cs" />
+    <Compile Include="Test Framework\Steps\Cases\Detail\Distribution\NewDistributionSteps.cs" />
+    <Compile Include="Test Framework\Steps\Cases\Detail\Distribution\NewDistributionValidationsSteps.cs" />
+    <Compile Include="Test Framework\Steps\Cases\Detail\Notes\CaseNotesSteps.cs" />
+    <Compile Include="Test Framework\Login.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Login.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Test Framework\Pages\Cases\List\CaseListFields.cs" />
+    <Compile Include="Test Framework\Pages\Cases\List\CaseListSearchForm.cs" />
+    <Compile Include="Test Framework\Pages\Cases\List\PickListField.cs" />
+    <Compile Include="Test Framework\Pages\Common\CircleIcon.cs" />
+    <Compile Include="Test Framework\Steps\Cases\Detail\Claims\CaseClaimsSummarySteps.cs" />
+    <Compile Include="Test Framework\Steps\Cases\Detail\CaseDetailSteps.cs" />
+    <Compile Include="Test Framework\Pages\Cases\Detail\Claims\ClaimSummaryItemData.cs" />
+    <Compile Include="Test Framework\Steps\Cases\Detail\Claims\CaseClaimsListSteps.cs" />
+    <Compile Include="Test Framework\Pages\Cases\Detail\Claims\ClaimData.cs" />
+    <Compile Include="Test Framework\Steps\Common\CommonRegionsSteps.cs" />
+    <Compile Include="Test Framework\Steps\Cases\List\CasesListSteps.cs" />
+    <Compile Include="Test Framework\Pages\Cases\List\CaseListPage.cs" />
+    <Compile Include="Test Framework\Steps\Common\CommonStepsNew.cs" />
+    <Compile Include="Test Framework\Steps\Common\ContactEpiqSteps.cs" />
+    <Compile Include="Test Framework\Steps\Common\PredictiveSearchSteps.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Test Framework\Core\Exceptions\MissingElementException.cs" />
+    <Compile Include="Test Framework\Core\TestsLogger.cs" />
+    <Compile Include="Test Framework\Pages\Common\NavigationBar.cs" />
+    <Compile Include="Test Framework\Steps\Common\Base\SignedInUnityUserStepBase.cs" />
+    <Compile Include="Test Framework\Steps\Common\RolesAndPermissionsSteps.cs" />
+    <Compile Include="Test Framework\Steps\DashboardExtendNoData\GlobalExtendNoDataSteps.cs" />
+    <Compile Include="Test Framework\Steps\DashboardExtendNoData\TrusteeVisibilitySteps.cs" />
+    <Compile Include="Test Framework\Steps\Dashboard\DashboardPageSteps.cs" />
+    <Compile Include="Test Framework\Steps\Dashboard\DashboardSteps.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Test Framework\Pages\Common\UnityPageBase.cs" />
+    <Compile Include="Test Framework\Pages\Dashboard\DashboardPage.cs" />
+    <Compile Include="Test Framework\Pages\Common\UniversalAppBar.cs" />
+    <Compile Include="Test Framework\Pages\Dashboard\UniversalSearch.cs" />
+    <Compile Include="Test Framework\Steps\Dashboard\Dashboard_EnhancementsSteps.cs" />
+    <Compile Include="Test Framework\Steps\Dashboard\UniversalSearchSteps.cs" />
+    <Compile Include="Test Framework\Steps\Dates\DatesManagementPageSteps.cs" />
+    <Compile Include="Test Framework\Steps\Distribution\DistributionManagementPageSteps.cs" />
+    <Compile Include="Test Framework\Steps\Documents\DocumentsSteps.cs" />
+    <Compile Include="Test Framework\Steps\Emails\EmailsSteps.cs" />
+    <Compile Include="Test Framework\Steps\Imports\ImportCaseDataChangesSteps.cs" />
+    <Compile Include="Test Framework\Steps\Imports\ImportClaimSteps.cs" />
+    <Compile Include="Test Framework\Steps\Imports\ImportDatesSteps.cs" />
+    <Compile Include="Test Framework\Steps\Imports\ImportDocumentsSteps.cs" />
+    <Compile Include="Test Framework\Steps\Imports\ImportSteps.cs" />
+    <Compile Include="Test Framework\Steps\Participants\ParticipantRolesSteps.cs" />
+    <Compile Include="Test Framework\Steps\Participants\ParticipantsSteps.cs" />
+    <Compile Include="Test Framework\Steps\Superadmin\SuperAdminPermissionSteps.cs" />
+    <Compile Include="Test Framework\Steps\Superadmin\SuperAdminSteps.cs" />
+    <Compile Include="Test Framework\Steps\Tasks\TaskManagementPageSteps.cs" />
+    <Compile Include="Test Framework\Steps\Tasks\TaskResolvedSteps.cs" />
+    <Compile Include="Test Framework\Steps\UnityReports\UFRReportsSteps.cs" />
+    <Compile Include="Test Framework\Steps\UnityReports\UnityReportsSteps.cs" />
+    <Compile Include="Test Framework\Utils\FakeData.cs" />
+    <Compile Include="Test Framework\Steps\UserManagement\UserManagementSteps.cs" />
+    <Compile Include="Test Framework\Utils\Link.cs" />
+    <Compile Include="Test Framework\Core\PageObject.cs" />
+    <Compile Include="Test Framework\Pages\Login\LoginPage.cs" />
+    <Compile Include="Test Framework\Steps\Login\LoginSteps.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages\WebDriverIEDriver.2.45.0.0\tools\IEDriverServer-license.txt" />
+    <Content Include="packages\WebDriverIEDriver.2.45.0.0\tools\IEDriverServer.exe" />
+    <Content Include="Resources\Data Scripts\CLAIMS UPDATES AUTOMATION.sql" />
+    <None Include="Features\341Meeting\341Meeting_Case_Information.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>341Meeting_Case_Information.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\341Meeting\341Meeting_Past.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>341Meeting_Past.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\341Meeting\341Meeting_Upcoming.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>341Meeting_Upcoming.feature.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\SlowCheetah\SlowCheetah.Transforms.targets" />
+    <None Include="Resources\Data Scripts\Create Asset.sql" />
+    <None Include="App.DebugQA%28RC%29.config">
+      <DependentUpon>App.config</DependentUpon>
+      <IsTransformFile>True</IsTransformFile>
+    </None>
+    <None Include="ClassDiagram.cd" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="Debug.nuspec" />
+    <None Include="Infrastructure\QA\Archiver.ps1" />
+    <None Include="Infrastructure\QA\Cleanup.ps1" />
+    <None Include="Infrastructure\QA\EmailSender.ps1" />
+    <None Include="Infrastructure\QA\Transformer.ps1" />
+    <None Include="Infrastructure\QA\UnityRunner-CHROME.ps1" />
+    <None Include="Infrastructure\QA\UnityRunner-FIREFOX.ps1" />
+    <None Include="Infrastructure\QA\UnityRunner-IE.ps1" />
+    <None Include="Infrastructure\QA\XmlReader.ps1" />
+    <None Include="Infrastructure\RC\Archiver.ps1" />
+    <None Include="Infrastructure\RC\Cleanup.ps1" />
+    <None Include="Infrastructure\RC\EmailSender.ps1" />
+    <None Include="Infrastructure\RC\ProcessKiller.ps1" />
+    <None Include="Infrastructure\RC\Transformer.ps1" />
+    <None Include="Infrastructure\RC\UnityRunner-CHROME.ps1" />
+    <None Include="Infrastructure\RC\UnityRunner-FIREFOX.ps1" />
+    <None Include="Infrastructure\RC\UnityRunner-IE.ps1" />
+    <None Include="Infrastructure\RC\XmlReader.ps1" />
+    <None Include="Release.nuspec" />
+    <None Include="Resources\Data Scripts\GetClaimDetailsByCaseId.sql" />
+    <None Include="Resources\Data Scripts\Create Docket.sql" />
+    <None Include="Resources\Data Scripts\Create Document.sql" />
+    <None Include="Resources\Data Scripts\Delete AssetsDocketsAndDocuments.sql" />
+    <Content Include="Resources\Data Scripts\DeleteAutomationCreatedTransactionsByCaseId.sql" />
+    <None Include="Resources\Data Scripts\CLAIMS_RESTORE_CLAIM_FOR_EDITION.sql">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Resources\Data Scripts\NOTES DELETE AUTOMATION.sql" />
+    <Content Include="Resources\Data Scripts\NOTES INSERT AUTOMATION.sql" />
+    <Content Include="Resources\Data Scripts\TRANSACTION DELETE QUERIES FOR AUTOMATION.sql" />
+    <Content Include="Resources\Data Scripts\TRANSACTIONS LIST QUERIES.sql" />
+    <None Include="App.config">
+      <TransformOnBuild>true</TransformOnBuild>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App.DebugDev%28Chrome%29.config">
+      <DependentUpon>App.config</DependentUpon>
+      <IsTransformFile>True</IsTransformFile>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App.DebugDev%28Firefox%29.config">
+      <DependentUpon>App.config</DependentUpon>
+      <IsTransformFile>True</IsTransformFile>
+    </None>
+    <None Include="App.DebugDev%28InternetExplorer%29.config">
+      <DependentUpon>App.config</DependentUpon>
+      <IsTransformFile>True</IsTransformFile>
+    </None>
+    <None Include="App.DebugQA%28Chrome%29.config">
+      <DependentUpon>App.config</DependentUpon>
+      <IsTransformFile>True</IsTransformFile>
+    </None>
+    <None Include="App.DebugQA%28Firefox%29.config">
+      <DependentUpon>App.config</DependentUpon>
+      <IsTransformFile>True</IsTransformFile>
+    </None>
+    <None Include="App.DebugQA%28InternetExplorer%29.config">
+      <DependentUpon>App.config</DependentUpon>
+      <IsTransformFile>True</IsTransformFile>
+    </None>
+    <None Include="App.LocalQA%28Chrome%29.config">
+      <DependentUpon>App.config</DependentUpon>
+      <IsTransformFile>True</IsTransformFile>
+    </None>
+    <None Include="App.LocalQA%28Firefox%29.config">
+      <DependentUpon>App.config</DependentUpon>
+      <IsTransformFile>True</IsTransformFile>
+    </None>
+    <None Include="App.LocalQA%28InternetExplorer%29.config">
+      <DependentUpon>App.config</DependentUpon>
+      <IsTransformFile>True</IsTransformFile>
+    </None>
+    <None Include="App.Release.config">
+      <DependentUpon>App.config</DependentUpon>
+      <IsTransformFile>True</IsTransformFile>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Framework\Login.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Login.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SlowCheetahTargets)" Condition="Exists('$(SlowCheetahTargets)')" Label="SlowCheetah" />
+  <Target Name="AfterBuild">
+    <TransformXml Source="App.config" Transform="App.$(Configuration).config" Destination="bin\$(Configuration)\App.config" />
+  </Target>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\AutoItX.Dotnet.3.3.14.5\build\AutoItX.Dotnet.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\AutoItX.Dotnet.3.3.14.5\build\AutoItX.Dotnet.targets'))" />
+    <Error Condition="!Exists('packages\Selenium.WebDriver.ChromeDriver.2.37.0\build\Selenium.WebDriver.ChromeDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Selenium.WebDriver.ChromeDriver.2.37.0\build\Selenium.WebDriver.ChromeDriver.targets'))" />
+  </Target>
+  <Import Project="..\packages\AutoItX.Dotnet.3.3.14.2\build\AutoItX.Dotnet.targets" Condition="Exists('..\packages\AutoItX.Dotnet.3.3.14.2\build\AutoItX.Dotnet.targets')" />
+  <Import Project="..\packages\Selenium.WebDriver.ChromeDriver.2.37.0\build\Selenium.WebDriver.ChromeDriver.targets" Condition="Exists('..\packages\Selenium.WebDriver.ChromeDriver.2.37.0\build\Selenium.WebDriver.ChromeDriver.targets')" />
+  <Import Project="packages\AutoItX.Dotnet.3.3.14.5\build\AutoItX.Dotnet.targets" Condition="Exists('packages\AutoItX.Dotnet.3.3.14.5\build\AutoItX.Dotnet.targets')" />
+  <Import Project="packages\OctoPack.3.4.2\tools\OctoPack.targets" Condition="Exists('packages\OctoPack.3.4.2\tools\OctoPack.targets')" />
+  <Target Name="EnsureOctoPackImported" BeforeTargets="BeforeBuild" Condition="'$(OctoPackImported)' == ''">
+    <Error Condition="!Exists('packages\OctoPack.3.4.2\tools\OctoPack.targets') And ('$(RunOctoPack)' != '' And $(RunOctoPack))" Text="You are trying to build with OctoPack, but the NuGet targets file that OctoPack depends on is not available on this computer. This is probably because the OctoPack package has not been committed to source control, or NuGet Package Restore is not enabled. Please enable NuGet Package Restore to download them. For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('packages\OctoPack.3.4.2\tools\OctoPack.targets') And ('$(RunOctoPack)' != '' And $(RunOctoPack))" Text="OctoPack cannot be run because NuGet packages were restored prior to the build running, and the targets file was unavailable when the build started. Please build the project again to include these packages in the build. You may also need to make sure that your build server does not delete packages prior to each build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+  <Import Project="packages\Selenium.WebDriver.ChromeDriver.2.37.0\build\Selenium.WebDriver.ChromeDriver.targets" Condition="Exists('packages\Selenium.WebDriver.ChromeDriver.2.37.0\build\Selenium.WebDriver.ChromeDriver.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  
+  -->
+</Project>
